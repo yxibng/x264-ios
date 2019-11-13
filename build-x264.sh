@@ -48,10 +48,10 @@ then
 		    CPU=
 		    if [ "$ARCH" = "x86_64" ]
 		    then
-		    	CFLAGS="$CFLAGS -mios-simulator-version-min=7.0"
+		    	CFLAGS="$CFLAGS -mios-simulator-version-min=8.0"
 		    	HOST=
 		    else
-		    	CFLAGS="$CFLAGS -mios-simulator-version-min=5.0"
+		    	CFLAGS="$CFLAGS -mios-simulator-version-min=8.0"
 			HOST="--host=i386-apple-darwin"
 		    fi
 		else
@@ -64,7 +64,7 @@ then
 		        HOST="--host=arm-apple-darwin"
 			XARCH="-arch arm"
 		    fi
-                    CFLAGS="$CFLAGS -fembed-bitcode -mios-version-min=7.0"
+                    CFLAGS="$CFLAGS -fembed-bitcode -mios-version-min=8.0"
                     ASFLAGS="$CFLAGS"
 		fi
 
