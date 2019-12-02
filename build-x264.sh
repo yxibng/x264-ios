@@ -1,5 +1,11 @@
 #!/bin/sh
 
+# fetch source code 
+git submodule init 
+git submodule sync 
+git submodule update 
+
+
 CONFIGURE_FLAGS="--enable-static --enable-pic --disable-cli"
 
 ARCHS="arm64 x86_64 i386 armv7 armv7s"
