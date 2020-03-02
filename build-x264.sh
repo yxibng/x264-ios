@@ -6,7 +6,7 @@ git submodule sync
 git submodule update 
 
 
-CONFIGURE_FLAGS="--enable-static --enable-pic --disable-cli"
+CONFIGURE_FLAGS="--enable-static --enable-pic --disable-cli --disable-asm"
 
 ARCHS="arm64 x86_64 i386 armv7 armv7s"
 
