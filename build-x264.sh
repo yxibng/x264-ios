@@ -45,7 +45,7 @@ then
 		echo "building $ARCH..."
 		mkdir -p "$SCRATCH/$ARCH"
 		cd "$SCRATCH/$ARCH"
-		CFLAGS="-arch $ARCH"
+		CFLAGS="-arch $ARCH -fvisibility=hidden"
                 ASFLAGS=
 
 		if [ "$ARCH" = "i386" -o "$ARCH" = "x86_64" ]
@@ -93,7 +93,7 @@ then
 		    --extra-ldflags="$LDFLAGS" \
 		    --prefix="$THIN/$ARCH" || exit 1
 
-		make -j3 install || exit 1
+		make -j12 install || exit 1
 		cd $CWD
 	done
 fi
